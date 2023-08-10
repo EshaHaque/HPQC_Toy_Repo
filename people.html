@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HPQC Labs: High Performance & Quantum Computing</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="people.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="Plugins/AOS/aos.css" rel="stylesheet">
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="shortcut icon" href="images/favicon.ico" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    window.MathJax = {
+      tex: {
+        // inlineMath: [['$', '$'], ['\\(', '\\)']],
+        packages: {'[+]': ['mhchem']}
+      },
+      loader: {load: ['[tex]/mhchem']},
+    };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+
+<body>
+
+    <!--See comments about Nav bar in index.html-->
+    <div id="menu">
+        <div class="navbar-toggle" id="navbar-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <a href="index.html" class="logo">
+            <img src="images/HPQC_Labs.svg" class="logoImg">
+            <span class="logoTxt">HPQC Labs</span>
+        </a>
+        <ul class="main-nav" id="main-nav">
+            <li><a href="index.html" accesskey="1" title="">Homepage</a></li>
+            <li class="current_page_item"><a href="people.html" accesskey="2" title="">People</a></li>
+            <li><a href="https://github.com/HPQC-LABS" accesskey="3" title="">Research</a></li>
+            <li><a href="by-laws.html" accesskey="4" title="">By-laws</a></li>
+            <li class="dropmenu">
+                <a class="dropbtn" accesskey="6" title="">Resources</a>
+                <div class="content">
+                    <a href="lectures.html" title="">Lectures</a>
+                    <a href="LaTeX.html">LaTeX Setup</a>
+                </div>
+            </li>
+            <li><a href="college.html" accesskey="5" title="">HPQC College</a></li>
+        </ul>
+    </div>
+
+    <!--Div used as a button to scroll to the top of the page-->
+    <div class="toTop" id="buttonID" data-aos="fade-right" data-aos-anchor="#trigger" data-aos-anchor-placement="top-top">
+        <!--Actual arrow in the main div, aligned using the center div-->
+        <div class="center"><div class="arrow"></div></div>
+    </div>
+    
+    <div id="featured">
+        <!-- <div class="container">
+            <div class="title">
+                <h2>High Performance &amp; Quantum Computing Labs</h2>
+                <span class="byline">HPC on classical & quantum computers.<br>Physics, Chemistry, Health Science,
+                    Medicine, Computation</span>
+            </div>
+            <ul class="actions">
+            </ul>
+        </div>
+       -->
+
+        <!--div contains all entries in people section-->
+        <div id="peopleList" class="peopleList">
+            <!--New section class formats each division (Faculty, Students, etc.)-->
+            <div class="newSection" data-aos="fade-up" id="trigger">
+                <div class="peopleTitle">
+                    <h2>Faculty</h2><br>
+                </div>
+                <!--Band class acts as a container for each person entry-->
+                <div class="band">
+                    <div class="item-1">
+                        <a href="#101bio" class="card" id="101">
+                            <div class="personPic" style="background-image: url('images/NikeDattani.png')"></div>
+                            <article>
+                                <h1>Nike Dattani</h1>
+                                <span>PhD Oxford</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-2">
+                        <a href="#102bio" class="card" id="102">
+                            <div class="personPic" style="background-image: url('images/RoselynLemus.png');"></div>
+                            <article>
+                                <h1>Roselyn Lemus-Martin</h1>
+                                <span>PhD Oxford</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-3">
+                        <a href="#103bio" class="card" id="103">
+                            <div class="personPic" style="background-image: url('images/DeyanMihaylov.png');"></div>
+                            <article>
+                                <h1>Deyan Mihaylov</h1>
+                                <span>PhD Cambridge</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-4">
+                        <a href="#104bio" class="card" id="104">
+                            <div class="personPic" style="background-image: url('images/ThomasMathew.png');"></div>
+                            <article>
+                                <h1>Thomas Mathew</h1><br><h3>(Adjunct)</h3>
+                                <span>PhD St. Stephens</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-5">
+                        <a href="#105bio" class="card" id="105">
+                            <div class="personPic" style="background-image: url('images/IhosvanyCamps.png');"></div>
+                            <article>
+                                <h1>Ihosvany Camps</h1>
+                                <span>PhD Institute of Physics (FFU)</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-6">
+                        <a href="#106bio" class="card" id="106">
+                            <div class="personPic" style="background-image: url('images/GergJuhasz.png');"></div>  <!-- HPQC_Labs.svg --> 
+                            <article>
+                                <h1>Greg Juhasz</h1><br><h3>(Adjunct)</h3>
+                                <span>PhD Kyushu University</span>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="newSection" data-aos="fade-up">
+                <div class="peopleTitle">
+                    <h2>Students</h2><br>
+                </div>
+                <div class="band">
+                    <div class="item-1">
+                        <a class="card">
+                            <div class="personPic"
+                                style="background-image: url('https://avatars1.githubusercontent.com/u/33160873?s=460&u=bb4f8d4f11c2a78050e4f2d45fdeabbdd5852b90&v=4');">
+                            </div>
+                            <article>
+                                <h1>Edwin Camilo</h1>
+                                <span>PhD Student</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-2">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/AndreasSoteriou.png');"></div>
+                            <article>
+                                <h1>Andreas Soteriou</h1>
+                                <span>MSc Student</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-3">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/OuettarChaouki.png');"></div>
+                            <article>
+                                <h1>Ouettar Chaouki</h1>
+                                <span>PhD Student</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-4">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/RoseJohnson.png')"></div>
+                            <article>
+                                <h1>Rose Johnson</h1>
+                                <span>PhD Student (UW)</span>
+                            </article>
+                        </a>
+                    </div>
+		    <div class="item-5">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/JustinLau.png')"></div>
+                            <article>
+                                <h1>Justin Lau</h1>
+                                <span>Undergrad Researcher</span>
+                            </article>
+                        </a>
+                    </div>
+		    <div class="item-6">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/HenriAbensour.png')"></div>
+                            <article>
+                                <h1>Henri Abensour</h1>
+                                <span>Undergrad Researcher</span>
+                            </article>
+                        </a>
+                    </div>
+		    <div class="item-7">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/AnantGupta.png')"></div>
+                            <article>
+                                <h1>Anant Gupta</h1>
+                                <span>Undergrad Researcher</span>
+                            </article>
+                        </a>
+                    </div>
+		    <div class="item-8">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/SukritSumant.png')"></div>
+                            <article>
+                                <h1>Sukrit Sumant</h1>
+                                <span>Undergrad Researcher</span>
+                            </article>
+                        </a>
+                    </div>
+		    <div class="item-9">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/YukunChen.png')"></div>
+                            <article>
+                                <h1>Yukun Chen</h1>
+                                <span>Undergrad Researcher</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-10">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/GracieAllen.png')"></div>
+                            <article>
+                                <h1>Gracie Allen</h1>
+                                <span>Undergrad Researcher</span>
+                            </article>
+                        </a>
+                    </div>
+		    <div class="item-11">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/PeilinZhang.png')"></div>
+                            <article>
+                                <h1>Peilin Zhang</h1>
+                                <span>Undergrad Researcher</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-12">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/SaiSmaran.png');"></div>
+                            <article>
+                                <h1>Sai Smaran</h1>
+                                <span>Undergrad Student</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-13">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/BhavikMehta.png');"></div>
+                            <article>
+                                <h1>Bhavik Mehta</h1>
+                                <span>PhD Student</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-14">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/ErikaBruulsema.png')"></div>
+                            <article>
+                                <h1>Erika Bruulsema</h1>
+                                <span>Undergrad Student</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-15">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/RachelleFontanilla.png');">
+                            </div>
+                            <article>
+                                <h1>Rachelle Fontanilla</h1>
+                                <span>Undergrad Student</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-16">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/TinaYu.png');"></div>
+                            <article>
+                                <h1>Tina Yu</h1>
+                                <span>Undergrad Student</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-17">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/MatthewCharbonneau.png');">
+                            </div>
+                            <article>
+                                <h1>Matthew Charbonneau</h1>
+                                <span>Undergrad Student</span>
+                            </article>
+                        </a>
+                    </div>
+
+                    <!-- HTML for card flip template
+
+                    <div class="item-10" id="entry">
+                        <div class="itemInner" id="itemId">
+                            <div class="cardFace cardFaceFront"  >
+                                <div class="frontContent">
+                                    <a class="card" id="cardFace">
+                                        <img class="personPic imgSettings" src="images/MatthewCharbonneau.png"></img>
+                                        <article>
+                                            <h1>Matthew Charbonneau</h1>
+                                            <span>Undergrad Student</span>
+                                        </article>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                            <div class="cardFace cardFaceBack"  >
+                                <div class="cardContent">
+                                    <div class="card" id="cardFace">
+                                        <h1 id="titleName">Matthew Charbonneau</h1>
+                                        <div class="cardBody">
+                                            <p>
+                                                Employee Description Goes Here
+                                                <br>
+
+                                                <br>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                                
+                                                <br> <br>
+                                                <b>Contact:</b>
+                                            </p>
+                                            <a href="https://www.linkedin.com"
+                                                target="_blank"><img src="images/linkedin-square.svg"
+                                                    class="contactLogo"></a>
+                                            <a href="mailto:browning.evan@gmail.com" target="_blank"><img
+                                                    src="images/envelope-line.svg" class="contactLogo" id="email"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+
+
+
+                    <div class="item-18">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/RubyKong.png');"></div>
+                            <article>
+                                <h1>Ruby Kong</h1>
+                                <span>Undergrad Student</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-19">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/TimLi.png');"></div>
+                            <article>
+                                <h1>Tim Li</h1>
+                                <span>Undergrad Student</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-20">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/MayaWei.png')"></div>
+                            <article>
+                                <h1>Maya Wei</h1>
+                                <span>Undergrad Student</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-21">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/NinaTan.png');"></div>
+                            <article>
+                                <h1>Nina Tan</h1>
+                                <span>Undergrad Student</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-22">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/KathrynWaterman.png');"></div>
+                            <article>
+                                <h1>Kathryn Waterman</h1>
+                                <span>Undergrad Student</span>
+                            </article>
+                        </a>
+                    </div>
+	            <div class="item-23">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/YasirHikari.png');"></div>
+                            <article>
+                                <h1>Yasir Hikari</h1>
+                                <span>Undergrad Student</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-24">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/EricHuang.png');"></div>
+                            <article>
+                                <h1>Eric Huang</h1>
+                                <span>Undergrad Student</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-25">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/HenryLiang.png');"></div>
+                            <article>
+                                <h1>Henry Liang</h1>
+                                <span>Undergrad Student</span>
+                            </article>
+                        </a>
+                    </div>
+	            <div class="item-26">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/MichaelHahn.jpg')"></div>
+                            <article>
+                                <h1>Michael Hahn</h1>
+                                <span>Undergrad Student</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-27">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/ArpitArunKumaar.jpg');"></div>
+                            <article>
+                                <h1>Arpit Arun Kumaar</h1>
+                                <span>Undergrad Student</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-28">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/GeorckiRopon-Palacios.png');"></div>
+                            <article>
+                                <h1>Georcki Ropón-Palacios</h1>
+                                <span>Research Student</span>
+                            </article>
+                        </a>
+                    </div>
+		    <div class="item-29">
+                        <a class="card">
+				<div class="personPic" style="background-image: url('images/HPQC_Labs.svg');"></div> 
+<!--                            <div class="personPic" style="background-image: url('images/SamZhuang.jpg');"></div> -->
+                            <article>
+                                <h1>Sam Zhuang</h1>
+                                <span>Undergraduate Researcher</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-30">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/HPQC_Labs.svg');"></div>
+                            <article>
+                                <h1>Tanishq Koul</h1>
+                                <span>Undergraduate Researcher</span>
+                            </article>
+                        </a>
+                    </div>
+	            <div class="item-31">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/HPQC_Labs.svg');"></div>
+                            <article>
+                                <h1>Mia Hippisley</h1>
+                                <span>Undergraduate Researcher</span>
+                            </article>
+                        </a>
+		    </div>
+		    <div class="item-32">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/HPQC_Labs.svg');"></div>
+                            <article>
+                                <h1>Laith Shareiyat</h1>
+                                <span>Undergraduate Researcher</span>
+                            </article>
+                        </a>
+		    </div>
+                    <div class="item-33">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/HPQC_Labs.svg');"></div>
+                            <article>
+                                <h1>Karrar Shareiyat</h1>
+                                <span>Undergraduate Researcher</span>
+                            </article>
+                        </a>
+		    </div>
+                </div>
+            </div>
+
+            <div class="newSection" data-aos="fade-up">
+                <div class="peopleTitle">
+                    <h2>Project Members</h2><br>
+                </div>
+                <div class="band">
+                    <div class="item-1">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/PriyaLakshmi.png');"></div>
+                            <article>
+                                <h1>Priya Lakshmi</h1>
+                                <span>Pre-doctoral Fellow</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-2">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/CorinneDupperouzel.png')"></div>
+                            <article>
+                                <h1>Corinne Dupperouzel</h1>
+                                <span>Quantum Chemistry</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-3">
+                        <a class="card">
+                            <div class="personPic"
+                                style="background-image: url('https://stats.ioinformatics.org/img/photos/2017/5654.jpg');">
+                            </div>
+                            <article>
+                                <h1>Hou Tin Chau</h1>
+                                <span>Classical Quadratization</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-4">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/SzilardSzalay.png')"></div>
+                            <article>
+                                <h1>Szilárd Szalay</h1>
+                                <span>Graph Theory</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-5">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/NicholasChancellor.png');">
+                            </div>
+                            <article>
+                                <h1>Nicholas Chancellor</h1>
+                                <span>Quantum Quadratization</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-6">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/YuZhai.png');"></div>
+                            <article>
+                                <h1>Yu Zhai</h1>
+                                <span>Quantum Chemistry</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-7">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/JoshuaTylerCantin.png')"></div>
+                            <article>
+                                <h1>Joshua Cantin</h1>
+                                <span>Hamiltonian Zoo</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-8">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/YudongCao.png');"></div>
+                            <article>
+                                <h1>Yudong Cao</h1>
+                                <span>Quantum Quadratization</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-9">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/KaWaYip.png');"></div>
+                            <article>
+                                <h1>Ka Wa Yip</h1>
+                                <span>Classical Quadratization</span>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="newSection" data-aos="fade-up">
+                <div class="peopleTitle">
+                    <h2>Guest Lecturers</h2><br>
+                </div>
+                <div class="band">
+                    <div class="item-1">
+                        <a href="#104bio" class="card" id="104">
+                            <div class="personPic" style="background-image: url('images/ThomasDimson.png')"></div>
+                            <article>
+                                <h1>Thomas Dimson</h1>
+                                <span>Director of Engineering, <br>Instagram</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-2">
+                        <a href="#105bio" class="card" id="105">
+                            <div class="personPic" style="background-image: url('images/EvanBrowning.png')"></div>
+                            <article>
+                                <h1>Evan Browning</h1>
+                                <span>Senior Software Engineer, <br>Netflix</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-3">
+                        <a href="#106bio" class="card" id="106">
+                            <div class="personPic" style="background-image: url('images/BrianneKent.png');"></div>
+                            <article>
+                                <h1>Brianne Kent</h1>
+                                <span>Professor, <br>Simon Fraser University</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-4">
+                        <a href="#107bio" class="card" id="107">
+                            <div class="personPic" style="background-image: url('images/LeonardZgrablic.png')"></div>
+                            <article>
+                                <h1>Leonard Zgrablic</h1>
+                                <span>Software Developer, <br>Google</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-5">
+                        <a href="#108bio" class="card" id="108">
+                            <div class="personPic" style="background-image: url('images/AhmedOmran.png');"></div>
+                            <article>
+                                <h1>Ahmed Omran</h1>
+                                <span>Artificial Intelligence Researcher, <br>Google</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-6">
+                        <a href="#109bio" class="card" id="109">
+                            <div class="personPic" style="background-image: url('images/GenevieveLaurier.png');"></div>
+                            <article>
+                                <h1>Genevieve Laurier</h1>
+                                <span>Managing Director, <br>The Social Innovation Partnership</span>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="newSection" data-aos="fade-up">
+                <div class="peopleTitle">
+                    <h2>Former Students and Mentees</h2><br>
+                </div>
+                <div class="band">
+                    <div class="item-1">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/RichardTanburn.png')"></div>
+                            <article>
+                                <h1>Richard Tanburn</h1>
+                                <span>Quadratization</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-2">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/EmileOkada.png')"></div>
+                            <article>
+                                <h1>Emile Okada</h1>
+                                <span>Quadratization</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-3">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/PankajGupta.png');"></div>
+                            <article>
+                                <h1>Pankaj Gupta</h1>
+                                <span>Computer Vision</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-4">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/NathanBryans.png')"></div>
+                            <article>
+                                <h1>Nathan Bryans</h1>
+                                <span>Quantum Compilers</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-5">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/TobyCathcartBurn.png');"></div>
+                            <article>
+                                <h1>Toby Cathcart-Burn</h1>
+                                <span>Quadratization</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-6">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/FaithKimongo.png');"></div>
+                            <article>
+                                <h1>Faith Kimongo</h1>
+                                <span>Graph Theory</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-7">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/HariJackson.png')"></div>
+                            <article>
+                                h1>Hari Jackson</h1>
+                                <span>Computational Genomics</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-8">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/StaszekWelsh.png');"></div>
+                            <article>
+                                <h1>Staszek Welsh</h1>
+                                <span>Computational Chemistry</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-9">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/KaiSlaughter.png');"></div>
+                            <article>
+                                <h1>Kai Slaughter</h1>
+                                <span>Computational Chemistry</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-10">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/HPQC_Labs.svg');"></div>
+                            <article>
+                                <h1>Yaqi Zhang</h1>
+                                <span>Graph Theory</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-11">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/DavidWilkins.jpeg');"></div>
+                            <article>
+                                <h1>David Wilkins</h1>
+                                <span>Quantum Dynamics</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-12">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/FelixPollock.jpeg');"></div>
+                            <article>
+                                <h1>Felix Pollock</h1>
+                                <span>Open Quantum Systems</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-13">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/YoungSangCho.png');"></div>
+                            <article>
+                                <h1>Young-Sang Cho</h1>
+                                <span>Computational Chemistry</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-14">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/OliverLunt.png');"></div>
+                            <article>
+                                <h1>Oliver Lunt</h1>
+                                <span>Adiabatic Quantum Computing</span>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-15">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/RichardNgo.png');"></div>
+                            <article>
+                                <h1>Richard Ngo</h1>
+                                <span>Quantum Compilers</span>
+                            </article>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="newSection" data-aos="fade-up">
+                <div class="peopleTitle">
+                    <h2>Interim Board of Directors</h2><br>
+                </div>
+                <div class="band">
+                    <div class="item-1">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/AzamHusain2.png')"></div>
+                            <article>
+                                <h1>Azam Husain</h1>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-2">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/LuisaPegoraro.png');"></div>
+                            <article>
+                                <h1>Luisa Pegoraro</h1>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-3">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/JohnAmari.jpeg');"></div>
+                            <article>
+                                <h1>John Amari</h1>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-4">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/ErinZuo.jpg')"></div>
+                            <article>
+                                <h1>Erin Zuo</h1>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-5">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/VineethPatil2.png');"></div>
+                            <article>
+                                <h1>Vineeth Patil</h1>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="item-6">
+                        <a class="card">
+                            <div class="personPic" style="background-image: url('images/VithuRamachandran.jpeg');">
+                            </div>
+                            <article>
+                                <h1>Vithu Ramachandran</h1>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Section containing html for the Biographies section-->
+        <div id="peopleBio" class="peopleBio">
+            <br>
+            <h1 id="header">Faculty</h1>
+            <br>
+            <button id="backToPeopleList" class="backToPeopleList">
+                Back To People
+            </button>
+            <br>
+            <!--Bio id corresponds to id in card section-->
+            <div id="101bio" class="personBio">
+                <br>
+                <h1>Dr. Nike Dattani</h1><br>
+                <!-- Dr. Nike Dattani was born in Scarborough (now Toronto) Ontario to refugee parents from Uganda. He attended elementary school in Whitby and high school in Markham. While at University of Waterloo, he worked as a scientific researcher with many professors, including Bob LeRoy, and Ray Laflamme (then the Director of the Institute for Quantum Computing, and a former PhD student of Stephen Hawking). He completed his PhD at Oxford University while funded by multiple different scholarships, including the prestigious Clarendon scholarship which is the most competitive scholarship available to all Oxford applicants. While at Oxford, he won the Heatherington Prize for the best doctoral thesis presentation. He then held many research positions including (but not limited to) JSPS Fellow and Fukui Fellow at Kyoto University (Japan), Research Fellow at Nanyang Technological University (Singapore) and the Harvard-Smithsonian Center for Astrophysics (USA), and Banting Fellow at McMaster University. -->
+		<!-- Nike Dattani was born in Scarborough, Ontario to refugee parents that were both forced to leave their home country of Uganda when the government of Uganda was abolishing ethnic minorities. As an undergraduate student he came up with Dattani corrections and worked for Ray Laflamme -->   
+		<!-- OCWA: Dr. Nike Dattani was born in Scarborough, Ontario to refugee parents from Uganda. His PhD was completed at Oxford University (in England) where he wrote the first software to calculate Feynman integrals numerically on GPU hardware. He was awarded the prestigious Hetherington Prize for the best doctoral thesis presentation in his year. While developing the MLR potential energy model with Bob LeRoy at the University of Waterloo, he invented what later became called the "Dattani corrections". Also while at UW, he worked with Ray Laflamme on the three-slit experiment, which was the first experimental test of Born's rule in quantum mechanics. He then worked on numerous scientific projects in computational genetics at University of Western Ontario, including one which established the techniques used many years later to discover in early 2020 that the virus causing COVID-19 was closely related to coronaviruses in bats. Other experience of his in Ontario includes holding a Banting Fellowship at McMaster University, working as a Research Officer at NRC, university-level teaching as a faculty member at University of Waterloo, and instrumental work in the early stages of HPQC Labs and HPQC College.Outside of Canada, he set the record for "largest number factored on a quantum device" while working at Kyoto University in Japan, he founded the Gravity in Spectroscopy project while working at the Harvard-Smithsonian Center for Astrophysics, contributed to ending a debate about the importance of quantum coherence in photosynthesis while working at NTU in Singapore, and contributed to quantum chemistry software (most notably NECI and OpenMOLCAS) during numerous visits to the Max Planck Institute for Solid State Research in Germany.Dr. Dattani started the Matter Modeling Stack Exchange in 2020. With 4000+ members, it is the largest community in the field of physical and chemical modeling of matter. -->  
+                <p><img src="images/NikeDattani.png" , Width="270" , Height="285"></p><!--
+                <ul>
+                    <li>The electronic complexity of the ground-state of the FeMo cofactor of nitrogenase as relevant to
+                        quantum simulations</li>
+                    <li>High-fidelity adiabatic quantum computation using the intrinsic Hamiltonian of a spin system:
+                        Application to the experimental factorization of 291311</li>
+                    <li>Entanglement in a quantum neural network based on quantum dots</li>
+                    <li>Crushing runtimes in adiabatic quantum computation with Energy Landscape Manipulation (ELM):
+                        Application to Quantum Factoring</li>
+                    <li>Analytic potentials and vibrational energies for \(\ce{ Li2 }\) states dissociating to \(\ce{
+                        Li(2S) + Li(3P) }\). Part 1: The \(\ce{ ^{2S+1}Π_{u/g} }\) states</li>
+                </ul>
+                <br><br>-->
+                <div class="publicationDiv">
+                    <h3>Publications</h3>
+                    <p>100+ Citations</p>
+                    <ul>
+                        <li> <a href="https://pubs.acs.org/doi/abs/10.1021/acs.jctc.9b00532" class="pubLink">OpenMolcas: From Source Code to Insight</a> </li>
+                        <li> <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.84.081305" class="pubLink">A general approach to quantum dynamics using a variational master equation: Application to phonon-damped Rabi rotations in quantum dots</a> </li>
+                        <li> <a href="https://aip.scitation.org/doi/abs/10.1063/1.3264688" class="pubLink">Accurate analytic potentials for \(\ce{ Li2 }\)(\(\ce{X^1}\) \(\ce{Σ^{+}_{g}}\)) and \(\ce{ Li2 }\)(\(\ce{A^1}\) \(\ce{Σ^{+}_{u}}\)) from 2 to 90 Å, and the radiative lifetime of Li(2p)</a> </li>
+                    </ul>
+    
+                    <p>20+ Citations</p>
+                    <ul>
+                        <li> <a href="https://pubs.acs.org/doi/abs/10.1021/ct501066k" class="pubLink">Why Quantum Coherence Is Not Important in the Fenna–Matthews–Olsen Complex</a> </li>
+                        <li> <a href="https://arxiv.org/abs/1411.6758" class="pubLink">Quantum factorization of 56153 with only 4 qubits</a> </li>
+                        <li> <a href="https://www.sciencedirect.com/science/article/abs/pii/S0022285211000853" class="pubLink">A DPF data analysis yields accurate analytic potentials for \(\ce{ Li2 }\)(\(\ce{a^3}\) \(\ce{Σ^{+}_{u}}\)) and \(\ce{ Li2 }\)(\(\ce{1^3}\) \(\ce{Σ^{+}_{g}}\)) that incorporate 3-state mixing near the (\(\ce{1^3}\) \(\ce{Σ^{+}_{g}}\)) state asymptote</a> </li>
+                        <li> <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.87.052505" class="pubLink">High-resolution photoassociation spectroscopy of the \(\ce{ ^6Li2 }\)(\(\ce{1^3}\) \(\ce{Σ^{+}_{g}}\)) state</a> </li>
+                        <li> <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0119815" class="pubLink">Mapping the Space of Genomic Signatures</a> </li>
+                        <li> <a href="http://www.naturalspublishing.com/Article.asp?ArtcID=407" class="pubLink">Analytic influence functionals for numerical Feynman integrals in most open quantum systems</a> </li>
+                        <li> <a href="https://arxiv.org/abs/1901.07636" class="pubLink">Pegasus: The second connectivity graph for large-scale quantum annealing hardware</a> </li>
+                        <li> <a href="https://aip.scitation.org/doi/abs/10.1063/1.4943622" class="pubLink">Towards a feasible implementation of quantum neural networks using quantum dots</a> </li>
+                        <li> <a href="https://aip.scitation.org/doi/abs/10.1063/1.5063376" class="pubLink">The electronic complexity of the ground-state of the FeMo cofactor of nitrogenase as relevant to quantum simulations</a> </li>
+                        <li> <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.88.062510" class="pubLink">High-resolution photoassociation spectroscopy of the \(\ce{ ^6Li2 }\) A(\(\ce{1^1}\) \(\ce{Σ^{+}_{u}}\)) state</a> </li>
+                        <li> <a href="https://www.sciencedirect.com/science/article/abs/pii/S0010465513002294" class="pubLink">FeynDyn: A MATLAB program for fast numerical Feynman integral calculations for open quantum system dynamics on GPUs</a> </li>
+                    </ul>
+
+                    <p>10+ Citations</p>
+                    <ul>
+                        <li> <a href="https://aip.scitation.org/doi/full/10.1063/5.0005754" class="pubLink">NECI: N-Electron Configuration Interaction with an emphasis on state-of-the-art stochastic methods                        </a> </li>
+                        <li> <a href="https://arxiv.org/abs/1706.08061" class="pubLink">High-fidelity adiabatic quantum computation using the intrinsic Hamiltonian of a spin system: Application to the experimental factorization of 291311</a> </li>
+                        <li> <a href="https://www.sciencedirect.com/science/article/pii/S1569441017300317" class="pubLink">Entanglement in a quantum neural network based on quantum dots</a> </li>
+                        <li> <a href="https://arxiv.org/abs/1508.04816" class="pubLink">Reducing multi-qubit interactions in adiabatic quantum computation without adding auxiliary qubits. Part 1: The "deduc-reduc" method and its application to quantum factorization of numbers</a> </li>
+                        <li> <a href="https://www.sciencedirect.com/science/article/abs/pii/S0022285214001945" class="pubLink">Beryllium monohydride (BeH): Where we are now, after 86 years of spectroscopy</a> </li>
+                        <li> <a href="https://arxiv.org/abs/1901.07676" class="pubLink">Embedding quadratization gadgets on Chimera and Pegasus graphs</a> </li>
+                        <li> <a href="https://aip.scitation.org/doi/abs/10.1063/1.4990673" class="pubLink">Investigation of the ozone formation reaction pathway: Comparisons of full configuration interaction quantum Monte Carlo and fixed-node diffusion Monte Carlo with contracted and uncontracted MRCI</a> </li>
+                        <li> <a href="https://arxiv.org/abs/1508.07190" class="pubLink">Reducing multi-qubit interactions in adiabatic quantum computation without adding auxiliary qubits. Part 2: The "split-reduc" method and its application to quantum determination of Ramsey numbers</a> </li>
+                    </ul>
+
+                    <p>Book</p>
+                    <ul>
+                        <li> <a href="https://arxiv.org/abs/1901.04405 " class="pubLink">Book About Quadratization</a> </li>
+                    </ul>
+                </div>
+                
+
+            </div>
+            <br>
+			
+			<!--Bio id corresponds to id in card section-->
+             <div id="105bio" class="personBio">
+                <br>
+                <h1>Dr. Ihosvany Camps</h1><br>
+                <!-- -->
+                <p><img src="images/IhosvanyCamps.png" , Width="270" , Height="285"></p>
+				
+                <div class="publicationDiv">
+                    <h3>Publications</h3>
+					<p>100+ Citations</p>
+					<ul>
+                        <li> <a href="https://www.sciencedirect.com/science/article/abs/pii/S0308814617319416" class="pubLink">The addition of inulin and Lactobacillus casei 01 in sheep milk ice cream</a> </li>
+                    </ul>
+					
+					<p>20+ Citations</p>
+                    <ul>
+					    <li> <a href="https://www.sciencedirect.com/science/article/abs/pii/S0223523408004133" class="pubLink">Natural polyprenylated benzophenones inhibiting cysteine and serine proteases</a> </li>
+						<li> <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.64.125311" class="pubLink">GaAs−Al<sub>x</sub>Ga<sub>1-x</sub>As double-barrier heterostructure phonon laser: A full quantum treatment</a> </li>
+						<li> <a href="https://www.sciencedirect.com/science/article/abs/pii/S0223523418300795" class="pubLink">Design, synthesis and pharmacological evaluation of N-benzyl-piperidinyl-aryl-acylhydrazone derivatives as donepezil hybrids: Discovery of novel multi-target anti-alzheimer prototype drug candidates</a> </li>
+						<li> <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.73.155317" class="pubLink">Voltage-controlled hole spin injection in nonmagnetic GaAs/AlAs resonant tunneling structures</a> </li>
+						<li> <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.74.041305" class="pubLink">Electric-field inversion asymmetry: Rashba and Stark effects for holes in resonant tunneling devices</a> </li>
+						<li> <a href="https://www.tandfonline.com/doi/full/10.3109/14756366.2012.668539" class="pubLink">Inhibition of cysteine proteases by a natural biflavone: behavioral evaluation of fukugetin as papain and cruzain inhibitor</a> </li>
+						<li> <a href="https://www.sciencedirect.com/science/article/pii/S0968089612001162" class="pubLink">Semisynthesis and antimicrobial activity of novel guttiferone-A derivatives</a> </li>
+					</ul>
+
+					
+					<p>10+ Citations</p>
+                    <ul>
+                        <li> <a href="https://www.sciencedirect.com/science/article/abs/pii/S0022231312003596" class="pubLink">Mangiferin binding to serum albumin is non-saturable and induces conformational changes at high concentrations</a> </li>
+						<li> <a href="https://www.sciencedirect.com/science/article/pii/S0753332221001414" class="pubLink">Repurposing potential of Ayurvedic medicinal plants derived active principles against SARS-CoV-2 associated target proteins revealed by molecular docking, molecular dynamics and MM-PBSA studies</a> </li>
+						<li> <a href="https://www.ingentaconnect.com/content/ben/lddd/2018/00000015/00000005/art00005" class="pubLink">Computational Approach to the Discovery of Phytochemical Molecules with Therapeutic Potential Targets to the PKCZ protein</a> </li>
+						<li> <a href="https://www.sciencedirect.com/science/article/abs/pii/S0169433217321633" class="pubLink">Effects of surface functionalization on the electronic and structural properties of carbon nanotubes: A computational approach</a> </li>
+						<li> <a href="https://www.tandfonline.com/doi/abs/10.1080/07391102.2018.1447513" class="pubLink"><i>In silico</i> development of new acetylcholinesterase inhibitors</a> </li>
+						<li> <a href="https://www.sciencedirect.com/science/article/abs/pii/S0038109800003124" class="pubLink">The operation threshold of a double barrier phonon laser</a> </li>
+						<li> <a href="https://www.frontiersin.org/articles/10.3389/fphar.2019.00658/full" class="pubLink">PQM130, a Novel Feruloyl–Donepezil Hybrid Compound, Effectively Ameliorates the Cognitive Impairments and Pathology in a Mouse Model of Alzheimer’s Disease</a> </li>
+						<li> <a href="https://link.springer.com/article/10.1007/s00894-014-2094-y" class="pubLink">First-principles calculations of nickel, cadmium, and lead adsorption on a single-walled (10,0) carbon nanotube</a> </li>
+						<li> <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/hlca.200890143" class="pubLink">Crystal structure of garciniaphenone and evidences on the relationship between keto–enol tautomerism and configuration</a> </li>
+						<li> <a href="https://academicjournals.org/journal/JMPR/article-abstract/A42115152263" class="pubLink">Morelloflavone and its semisynthetic derivatives as potential novel inhibitors of cysteine and serine proteases</a> </li>
+						<li> <a href="https://iopscience.iop.org/article/10.1088/0268-1242/12/12/005/meta" class="pubLink">Calculation of the thermal resistance and temperature distribution in blue-green semiconductor lasers</a> </li>
+                    </ul>
+				</div>
+			
+			</div>
+            <br>
+
+             <!--Bio id corresponds to id in card section-->
+             <div id="106bio" class="personBio">
+                <br>
+                <h1>Dr. Greg Juhasz</h1><br>
+                <!-- -->
+                <p><img src="images/GergJuhasz.png" , Width="270" , Height="285"></p><!--
+                <ul>
+                    <li>The electronic complexity of the ground-state of the FeMo cofactor of nitrogenase as relevant to
+                        quantum simulations</li>
+                    <li>High-fidelity adiabatic quantum computation using the intrinsic Hamiltonian of a spin system:
+                        Application to the experimental factorization of 291311</li>
+                    <li>Entanglement in a quantum neural network based on quantum dots</li>
+                    <li>Crushing runtimes in adiabatic quantum computation with Energy Landscape Manipulation (ELM):
+                        Application to Quantum Factoring</li>
+                    <li>Analytic potentials and vibrational energies for \(\ce{ Li2 }\) states dissociating to \(\ce{
+                        Li(2S) + Li(3P) }\). Part 1: The \(\ce{ ^{2S+1}Π_{u/g} }\) states</li>
+                </ul>
+                <br><br>-->
+                <div class="publicationDiv">
+                    <h3>Publications</h3>
+					<p>100+ Citations</p>
+                    <ul>
+                        <li> <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/anie.200602799" class="pubLink">A tosylimido analogue of a nonheme oxoiron (IV) complex</a> </li>
+                    </ul>
+					
+                    <p>20+ Citations</p>
+                    <ul>
+                        <li> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/pmc3097279/" class="pubLink">Modelling the cis-oxo-labile binding site motif of non-heme iron oxygenases. Water exchange and remarkable oxidation reactivity of a novel non-heme iron(IV)-oxo compound bearing a tripodal tetradentate ligand</a> </li>
+                        <li> <a href="https://pubs.acs.org/doi/abs/10.1021/ic049509b" class="pubLink">1-D Cobalt(II) Spin Transition Compound with Strong Interchain Interaction:  [Co(pyterpy)Cl2]·X</a> </li>
+                        <li> <a href="https://www.sciencedirect.com/science/article/pii/S0009261402013258" class="pubLink">Photo-induced spin transition for iron (III) compounds with π–π interactions</a> </li>
+                        <li> <a href="https://pubs.acs.org/doi/abs/10.1021/ic400417d" class="pubLink">Role of tyrosine residue in methane activation at the dicopper site of particulate methane monooxygenase: a density functional theory study</a> </li>
+                        <li> <a href="https://www.nature.com/articles/srep28393" class="pubLink">Emergence of new red-shifted carbon nanotube photoluminescence based on proximal doped-site design</a> </li>
+                        <li> <a href="https://pubs.acs.org/doi/abs/10.1021/jp107391x" class="pubLink">Theoretical study of the mechanism of valence tautomerism in cobalt complexes</a> </li>
+                        <li> <a href="https://pubs.acs.org/doi/abs/10.1021/ja808448j" class="pubLink">Bistability of magnetization without spin-transition in a high-spin cobalt (II) complex due to angular momentum quenching</a> </li>
+                        <li> <a href="https://www.nature.com/articles/srep02959" class="pubLink">Empirical prediction of electronic potentials of single-walled carbon nanotubes with a specific chirality (n, m)</a> </li>
+                        <li> <a href="https://pubs.acs.org/doi/abs/10.1021/acscatal.9b01438" class="pubLink">Impact of Ir-Valence Control and Surface Nanostructure on Oxygen Evolution Reaction over a Highly Efficient Ir–TiO2 Nanorod Catalyst</a> </li>
+                        <li> <a href="https://pubs.acs.org/doi/abs/10.1021/ic0604009" class="pubLink">Structure and magnetic properties of a non-heme diiron complex singly bridged by a hydroxo group</a> </li>
+                        <li> <a href="https://pubs.acs.org/doi/abs/10.1021/ic0509837" class="pubLink">Novel structural and magnetic properties of a 1-D Iron (II)− Manganese (II) LIESST compound bridged by cyanide</a> </li>  
+                        <li> <a href="https://pubs.acs.org/doi/abs/10.1021/jp9122002" class="pubLink">Theoretical Study of Thermal Spin Transition between the Singlet State and the Quintet State in the [Fe(2-picolylamine)3]2+ Spin Crossover System</a> </li>
+                        <li> <a href="https://pubs.acs.org/doi/abs/10.1021/ic200332y" class="pubLink">Mono-and dinuclear iron complexes of bis (1-methylimidazol-2-yl) ketone (bik): structure, magnetic properties, and catalytic oxidation studies</a> </li>
+                        <li> <a href="https://akjournals.com/view/journals/10967/255/3/article-p443.xml" class="pubLink">Iron (III) spin transition compound with a large thermal hysteresis</a> </li>
+                        <li> <a href="https://pubs.acs.org/doi/abs/10.1021/acs.jpcc.5b07841" class="pubLink">Determination of precise redox properties of oxygen-doped single-walled carbon nanotubes based on in situ photoluminescence electrochemistry</a> </li>
+                        <li> <a href="https://pubs.acs.org/doi/abs/10.1021/cm011190v" class="pubLink">Simultaneous Probing of the Fe and Co Sites in the CO2-Absorber Perovskite Sr0.95Ca0.05Co0.5Fe0.5O3-δ:  a Mössbauer Study</a> </li>
+                        <li> <a href="https://www.sciencedirect.com/science/article/pii/S0167273801006907" class="pubLink">Microstructural study of the CO2 absorption in SrxCa1− xFe0. 5Co0. 5O3− δ</a> </li>
+                        <li> <a href="https://www.journal.csj.jp/doi/abs/10.1246/bcsj.76.1207" class="pubLink">Study of intermolecular interaction for the spin-crossover iron (II) compounds</a> </li>
+                 
+                    </ul>
+<p>10+ Citations</p>
+                    <ul>
+                        <li> <a href="https://pubs.rsc.org/en/content/articlelanding/2019/cp/c8cp07445c/unauth"  class="pubLink">Electrochemical hydrogenation of non-aromatic carboxylic acid derivatives as a sustainable synthesis process: from catalyst design to device construction </a> </li>
+                        <li> <a href="https://pubs.acs.org/doi/abs/10.1021/ic200481n" class="pubLink">Theoretical Study of Oxidation of Cyclohexane Diol to Adipic Anhydride by [RuIV(O)(tpa)(H2O)]2+ Complex (tpa ═ Tris(2-pyridylmethyl)amine) </a> </li>
+                        <li> <a href="https://link.springer.com/article/10.1023/A:1021233703312" class="pubLink">Mössbauer Study of (Sr,Ca)(Fe,Co)O3−δ Applied to CO2 Absorption at High Temperatures </a> </li>
+                        <li> <a href="https://www.journal.csj.jp/doi/abs/10.1246/cl.2003.882" class="pubLink">[CoII(phimpy)2](ClO4)2 and [CoII(ipimpy)2](ClO4)2: New Cobalt(II) Spin Crossover Compounds, and the Role of the Ligand Flexibility in Spin Transition Behavior </a> </li>
+                        
+                       
+                    </ul>
+
+                </div>
+                
+
+            </div>
+            <br>
+
+            <div id="102bio" class="personBio">
+                <!--  Beginning of redisign for bios page 
+                 <div class="head">
+                    <h1>Dr. Roselyn Lemus-Martin</h1><br>
+                    <img src="images/RoselynLemus.png">
+
+                </div>
+            -->
+                <h1>Dr. Roselyn Lemus-Martin</h1><br>
+
+                <p><img src="images/RoselynLemus.png"><!-- Dr. Lemus-Martin graduated <i>summa cum laude</i> with a
+                    Bachelor's Degree in Chemistry at Universidad Nacional Autónoma de México (UNAM), during which she
+                    also studied Chemistry and Medicine at Universidad Autónoma de Madrid. This was followed by a PhD in
+                    Molecular Cell Biology at Oxford University. She has further academic credentials in Molecular
+                    Oncology from Universidad Rey Juan Carlos, in Clinial Research Monitoring from UNAM, in Project
+                    Management from UNAM, and in Design Thinking from Stanford University. <br><br> Dr. Lemus-Martin has
+                    a plethora of post-PhD experience in clinical research, consulting, and as a corporate executive.
+                    She was the Head of Drug Development and Research at Landsteiner Scientific, and a consultant for
+                    Templeton World Charity Foundation. She has also served on the Board of Advisors for the Association
+                    of Medical Doctors in the Pharmaceutical Industry, and as Vice President of the Oxford University
+                    Alumni Association. <br><br> Dr. Lemus-Martin was slected by McKinsey &amp Company for the Next
+                    Generation Women Leader Award in 2019, as one of the most influential young female leaders in the
+                    world, and she has been a member of Women in AI since 2020. --></p>
+            </div>
+            <br>
+
+            <div id="103bio" class="personBio">
+                <h1>Dr. Deyan Mihaylov</h1><br>
+
+                <p><img src="images/DeyanMihaylov.png">Dr. Mihaylov completed his undergraduate degree in Physics at
+                    Oxford University (UK), then went on to do his PhD at Cambridge University (UK) where he studied
+                    general relativity and gravitational waves. Upon completion of his PhD, he began his post-doctoral
+                    career at the Max Planck Institute for Gravitational Physics in Berlin, Germany.</p>
+            </div>
+            <br>
+            <h1 id="header">Guest Lecturers</h1>
+            <br>
+            <div id="104bio" class="personBio">
+                <h1>Thomas Dimson</h1><br>
+
+                <p><img src="images/ThomasDimson.png">Thomas Dimson was one of the first 40 employees at Instagram, back
+                    in 2013 when the app was still new. He is the original author of "the algorithm" at Instagram, and
+                    was the brain behind how feeds and stories work. He invented Hyperlapse, which is the app that was
+                    used for the filming of the music video for "Centuries" by Fall Out Boy. He also invented Instagram
+                    products such as stories polling sticker, and emogineering. In 2015 he was named one of the top 10
+                    most creative people in business worldwide, and in 2018 he was promoted from Principal Engineer to
+                    Director of Engineering at Instagram.<br><br>
+                    Dimson earned his MSc in CS from Stanford University, where he specialized in Artificial
+                    Intelligence, Natural Language Processing, and Data Mining. Prior to that he earned a triple-degree
+                    in Applied Math, Computer Science, and Pure Math at University of Waterloo, and worked at Amazon,
+                    Bloomberg L.P. and the Perimeter Institute for Theoretical Physics.<br><br>
+                    Dimson has over 30 US patents listed on Google Scholar as of January 2021, and several of his
+                    publications and patents have acquired an unusually high number of citations.
+                    <br>
+                    <br>
+                    <b>Publications:</b> 
+                </p>
+                <a href="https://scholar.google.com/citations?user=5oxoN_IAAAAJ" target="_blank" class="link"><img
+                    src="images/google-scholar.svg" class="contactLogo" id="scholar"></a>
+            </div>
+            <br>
+
+            <div id="105bio" class="personBio">
+                <h1>Evan Browning</h1><br>
+
+                <p><img src="images/EvanBrowning.png">Evan Browning joined the virtual reality team at Facebook in July
+                    2020, after 5 years as a Senior Software Engineer at Netflix.<br><br>
+                    Browning completed his computer science degree at University of Toronto, where he also worked as a
+                    researcher, and held a job as a GIS Analyst at Ontario's Ministry of Natural Resources.</p>
+            </div>
+            <br>
+
+            <div id="106bio" class="personBio">
+                <h1>Dr. Brianne Kent</h1><br>
+
+                <p><img src="images/BrianneKent.png">Dr. Brianne Kent is a professor at Simon Fraser University, where
+                    she runs the Translational Neuroscience Lab and studies how disprupted sleep can contribute to
+                    memory loss in people with Alzheimer's patients. She currently sits on the Governing Council of the
+                    Canadian Institutes of Health Research.<br><br>
+                    Dr. Kent was previously a research fellow at Harvard Medical School, and held a postdoctoral
+                    position at UBC funded by three simultaneous fellowships including the extremely prestigious Banting
+                    Fellowship. She completed her PhD in neuroscience from Cambridge University where she was a Gates
+                    Scholar, and also holds degrees from Yale University and Simone Fraser University.<br><br>
+                    Dr. Kent has published many papers in scientific journals, and as of January 2021 has a Google
+                    Scholar h-index of 20. 
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <b>Publications:</b> 
+                </p>
+                <a href="https://scholar.google.com/citations?user=JzVWTVMAAAAJ" target="_blank" class="link"><img
+                    src="images/google-scholar.svg" class="contactLogo" id="scholar"></a>
+            </div>
+            <br>
+
+            <div id="107bio" class="personBio">
+                <h1>Leonard Zgrablic</h1><br>
+
+                <p><img src="images/LeonardZgrablic.png">Leonard Zgrablic is a Software Engineer at Google, working on
+                    the Stadia Controller firmware. Previously he held Software Engineering positions at Arista
+                    Networks, Clearpath, and Blackberry.<br><br>
+                    Zgrablic also had a successful career as an actor, director, and writer, having won multiple awards.
+                    He was in the cast of Stiffs on the Green (2011), The Cult (2012), and was listed as one of the lead
+                    stars in Catalyst (2015)</p>
+            </div>
+            <br>
+
+            <div id="108bio" class="personBio">
+                <h1>Dr. Ahmed Omran</h1><br>
+
+                <p><img src="images/AhmedOmran.png">Dr. Ahmed Omran is an Artificial Intelligence resident at
+                    Google.<br>
+                    Dr. Omran previously worked at Harvard University in the Physics Department, and as a Research
+                    Consultant for QuEra Computing in Boston. His PhD is from LMU Munich where he also worked at the Max
+                    Planck Institute of Quanum Optics. He also holds Bachelor's and Master's degrees from TU
+                    Munich.<br><br>
+                    Dr. Omran has 3 publications in Nature, 3 publications in Science, and 5 publications in Physical
+                    Review Letters as of January 2021 and 100% all of his publications prior to 2020 have over 100
+                    citations. His paper with Mikhail Lukin involving an in-house 51-qubit programmable quantum computer
+                    reached 1000 citations on Google Scholar after 3 years.
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <b>Publications:</b> 
+                </p>
+                <a href="https://scholar.google.com/citations?user=ZkF5QKcAAAAJ&hl=en" target="_blank" class="link"><img
+                    src="images/google-scholar.svg" class="contactLogo" id="scholar"></a>
+            </div>
+            <br>
+
+            <div id="109bio" class="personBio">
+                <h1>Genevieve Laurier</h1><br>
+
+                <p><img src="images/GenevieveLaurier.png">Genevieve Laurier is the Managing Director at The Social
+                    Innovation Partnership, having previously been Director of Delivery and Impact, Head of Delivery and
+                    Impact, and Acting Head of Impact and Evaluation. <br><br>
+                    Laurier was also previously the President of Oxford Hub, which had over 5000 individual members and
+                    80 institutional members.<br><br>
+                    Laurier holds an MSc from Oxford University where she wrote a thesis about sexual minority topics in
+                    the sex education at schools, and a bachelor's degree in PPE, also at Oxford University.</p>
+            </div>
+            <br>
+
+
+        </div>
+        <br>
+
+
+        <div id="copyright" class="container" , style="background:#79C255" ;>
+            <p>&copy; HPQC Labs. All rights reserved. </p>
+        </div>
+
+        <!--Initializing js files used-->
+        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript" src="people.js"></script>
+
+        <!--Initializes AOS script which is used to animate divs apppearing when scrolling down-->
+        <script src="Plugins/AOS/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+</body>
+
+</html>
